@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --overpass: "Overpass", sans-serif;
+  --Orange: hsl(25, 97%, 53%);
+  --White: hsl(0, 0%, 100%);
+  --Light-Grey: hsl(217, 12%, 63%);
+  --Medium-Grey: hsl(216, 12%, 54%);
+  --Dark-Blue: hsl(213, 19%, 18%);
+  --Very-Dark-Blue: hsl(216, 12%, 8%);
+  --opacity-white: rgba(194, 194, 194, 0.076);
+  --background-linear-gradient: linear-gradient(
+    to top,
+    hsla(221, 40%, 18%, 0.491),
+    hsl(213, 19%, 18%)
+  );
+}
+body {
+  background: var(--Very-Dark-Blue);
+  color: var(--White);
+  font-family: var(--overpass);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.5rem;
+}
+section {
+  padding: 1rem 1rem;
+  background-color: var(--Dark-Blue);
+  width: 100%;
+  border-radius: 25px;
+}
+button {
+  cursor: pointer;
+}
+
+main {
+  text-align: start;
+}
+main img {
+  background-color: var(--opacity-white);
+  padding: 1rem;
+  border: none;
+  border-radius: 50%;
+  margin: 0.5rem 0 1.7rem 0;
+}
+main h3 {
+  font-size: 25px;
+  font-weight: 600;
+}
+main p {
+  font-size: 14px;
+  color: var(--Light-Grey);
+  line-height: 22px;
+  margin: 1rem 0 1rem 0;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+}
+.num-btns {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem 0;
+}
+
+.num-btns button {
+  width: 15%;
+  height: 50px;
+  align-items: center;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(194, 194, 194, 0.076);
+  color: var(--Light-Grey);
+  font-family: var(--overpass);
+  font-weight: bold;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+
+.num-btns button:hover {
+  background-color: var(--Orange);
+  color: var(--White);
+}
+
+.active {
+  background-color: var(--Medium-Grey) !important;
+  color: var(--White) !important;
+}
+
+.submit-btn {
+  margin: 1rem 0;
+}
+
+.submit-btn button {
+  font-family: var(--overpass);
+  text-transform: uppercase;
+  font-size: 17px;
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 35px;
+  background-color: var(--Orange);
+  color: var(--White);
+  transition: 0.3s ease;
+}
+
+.submit-btn button:active {
+  background-color: var(--White);
+  color: var(--Orange);
+}
+
+/*---------- thank-you section code ------------------------*/
+
+.thank-you-section {
+  display: none;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5rem 1.7rem 1.8rem 1.7rem;
+  background: var(--background-linear-gradient);
+  transition: 0.5s ease;
+}
+
+.thank-you-section img {
+  margin-bottom: 1.3rem;
+}
+
+.thank-you-section h3 {
+  margin-top: 0.7rem;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.thank-you-section p {
+  font-size: 14px;
+  color: var(--Light-Grey);
+  line-height: 22px;
+  margin: 0.8rem 0 1rem 0;
+}
+
+.selected-no {
+  width: max-content;
+  padding: 0.1rem 1.3rem;
+  border: none;
+  border-radius: 20px;
+  color: var(--Orange) !important;
+  background-color: var(--opacity-white);
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+/* code for responsiveness on big screen size */
+@media only screen and (min-width: 425px) {
+  body {
+    padding: 0;
+  }
+  section {
+    padding: 1.5rem 2rem 1rem 2rem;
+
+    width: 400px;
+  }
+
+  .thank-you-section {
+    padding: 2.5rem 2rem 1.8rem 2rem;
+    width: 380px;
+  }
+}
